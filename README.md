@@ -18,13 +18,6 @@ Covers everything you need before starting Next.js.
 9. keyof & typeof
 10. Advanced Patterns — as const, type guards, template literals
 
-## Hosting on GitHub Pages
-
-1. Create a new repository on GitHub (e.g. `ts-nextjs-guide`)
-2. Upload all four files: `index.html`, `style.css`, `content.js`, `app.js`
-3. Go to **Settings → Pages**
-4. Under **Source**, select `main` branch and `/ (root)` folder
-5. Click **Save** — your site is live at https://laavanjan.github.io/ts-nextjs-guide/
 
 ## Files
 
