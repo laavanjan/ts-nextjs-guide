@@ -170,7 +170,44 @@ hamburger.addEventListener('click', () => {
 });
 overlay.addEventListener('click', closeSidebar);
 
+// ── Theme Toggle ───────────────────────────────────────────
+let isDark = true;
+
+try {
+  const savedTheme = localStorage.getItem('ts-guide-theme');
+  if (savedTheme === 'light') isDark = false;
+} catch(e) {}
+
+function applyTheme() {
+  if (isDark) {
+    document.body.classList.remove('light');
+  } else {
+    document.body.classList.add('light');
+  }
+
+  const icon  = isDark ? '☀' : '☾';
+  const label = isDark ? 'Light' : 'Dark';
+
+  const themeIcon   = document.getElementById('themeIcon');
+  const themeLabel  = document.getElementById('themeLabel');
+  const themeIconMobile = document.getElementById('themeIconMobile');
+
+  if (themeIcon)       themeIcon.textContent  = icon;
+  if (themeLabel)      themeLabel.textContent = label;
+  if (themeIconMobile) themeIconMobile.textContent = icon;
+}
+
+function toggleTheme() {
+  isDark = !isDark;
+  try { localStorage.setItem('ts-guide-theme', isDark ? 'dark' : 'light'); } catch(e) {}
+  applyTheme();
+}
+
+document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+document.getElementById('themeToggleMobile').addEventListener('click', toggleTheme);
+
 // ── Init ───────────────────────────────────────────────────
+applyTheme();
 buildNav();
 renderTopic(currentTopic);
 updateProgress();
