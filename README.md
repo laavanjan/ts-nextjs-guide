@@ -1,5 +1,7 @@
 # TypeScript for Next.js — Learning Guide
 
+**Live site:** https://laavanjan.github.io/ts-nextjs-guide/
+
 A personal study guide built from real questions and doubts.
 Covers everything you need before starting Next.js.
 
@@ -22,7 +24,7 @@ Covers everything you need before starting Next.js.
 2. Upload all four files: `index.html`, `style.css`, `content.js`, `app.js`
 3. Go to **Settings → Pages**
 4. Under **Source**, select `main` branch and `/ (root)` folder
-5. Click **Save** — your site will be live at `https://yourusername.github.io/ts-nextjs-guide`
+5. Click **Save** — your site is live at https://laavanjan.github.io/ts-nextjs-guide/
 
 ## Files
 
