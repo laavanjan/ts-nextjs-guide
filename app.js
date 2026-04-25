@@ -171,7 +171,7 @@ hamburger.addEventListener('click', () => {
 overlay.addEventListener('click', closeSidebar);
 
 // ── Theme Toggle ───────────────────────────────────────────
-let isDark = true;
+let isDark = false;
 
 try {
   const savedTheme = localStorage.getItem('ts-guide-theme');
